@@ -1,7 +1,14 @@
+
+
 .searchBox::-webkit-scrollbar{
     width: 9px;
     background-color: lightgray;
     border-radius: 5px;
+    padding-right: 5px;
+}
+.searchBox::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 50px;
 }
 .searchBox{
     height: 600px;
@@ -12,14 +19,35 @@
     float: left;
     position: relative;
     overflow-y: scroll;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .searchBar input[type=text]{
     margin: 0px 0px 0px 45px;
     width: 150px;
 }
+.wluBuildingsItems > p{
+    font-size: 9px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*
+    WORK ON .FOOTER IN MAKING IT HAVE MULTIPLE PAGES: 
+    maybe not a div?
+*/
+.mapboxgl-popup{
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.footer{
+    padding-top: 50px;
+    border: 5px solid green;
+    float: right;
+}
 
+.marker{
+    background-image: url('images/inactive_node.png');
+}
 #mapBox{
     border: 5px solid black;
     border-radius: 15px;
@@ -29,15 +57,7 @@
     margin: 25px 40px;
     float: right;
 }
-/*
-    WORK ON .FOOTER IN MAKING IT HAVE MULTIPLE PAGES: 
-    maybe not a div?
-*/
-.footer{
-    padding-top: 50px;
-    border: 5px solid green;
-    float: right;
-}
+
 #mapImage{
     width: 100%;
     height: 100%;
@@ -57,8 +77,3 @@
     
 }
 
-.wluBuildingsItems > p{
-    font-size: 9px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
