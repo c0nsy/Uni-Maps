@@ -15,11 +15,11 @@ const wluBuildings =[
     {name: "Franklin C. Peters Building ",description: "Franklin Building",img:"images/frankcpb.png",pos: []
     }
 ];
-console.log(window.searchBarjs);
-console.log(searchBarjs);
+//console.log(window.searchBarjs);
+//console.log(searchBarjs);
 
 
-//This is the auto filter function
+//This is the auto filter function ; SEARCHBAR  
 searchBarjs.addEventListener('keyup', (e) =>{ //anytime a key is pressed then up it triggers the following function
     const targetRoom = e.target.value.toLowerCase(); //setting targetRoom to lower case to ensure monkeys can type
 
@@ -27,6 +27,12 @@ searchBarjs.addEventListener('keyup', (e) =>{ //anytime a key is pressed then up
         return (roomNumber.name.toLowerCase().includes(targetRoom));
     });
     displayRooms(filteredWluClassRooms);
+});
+//This is the event listener for clicking an image in div
+//1. On click, update and highlight the node you are to travel to
+//2. Then plot the path
+wluBuildingWrapper.addEventListener('click', function (e) {
+
 });
 //current issue is getting the stuff to load
 const loadRooms = async()=>{
@@ -47,7 +53,7 @@ const displayRooms = (wluRooms)=>{
             <div id = wluBuildingsItemsContainer>
                 <li class=wluBuildingsItems>
                     <p>${building.name}</p> 
-                    <img src =${building.img}></img>
+                    <img id = wluImage src =${building.img}></img>
                 </li>
             </div>
             `;
@@ -56,4 +62,6 @@ const displayRooms = (wluRooms)=>{
     wluBuildingWrapper.innerHTML = htmlString; 
     //console.log(wluBuilding);    
 };
+//COPY PASTED FROM MAIN
+
 loadRooms();

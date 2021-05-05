@@ -27,28 +27,11 @@
 
         <!--Map box, has geolocator and distance algo within + image-->
         <!--MAPYBE PUT THE SCRIPT IN THE APP.JS AREA AND REFORMAT SO ITS PRETTIER CODE-->
+        <!--Add every single node to the map-->
         <div id='mapBox'></div>
-            <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoiY2xvZ2FuY3MiLCJhIjoiY2tuaTR3OGVsMHU3ODJ3cDVmMWZ5Z2tuciJ9.OquwBA2myFqOQCC9DiS6YQ';
-            
-            var map = new mapboxgl.Map({
-                container: 'mapBox',
-                center: [-80.5278, 43.4740],
-                zoom: 16,
-                interactive: false,
-                style: 'mapbox://styles/mapbox/streets-v11'
-                });
-            map.addControl(
-                new mapboxgl.GeolocateControl({
-                    positionOptions:{
-                        enableHighAccuracy: true
-                    },
-                    trackUserLocation: true,
-                }),
-                
-            );
+            <!--stores the map functions-->
+            <script src = 'map.js'></script>
 
-            </script>
     <script src="app.js"></script>
     </body>
 
