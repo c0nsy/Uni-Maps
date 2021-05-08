@@ -897,24 +897,30 @@ mapIcons.features.forEach(function(marker){
 function success(position){
     lat = position.coords.latitude;
     long = position.coords.longitude;
-    setPosition(lat,long);
+    setPosition(long,lat);
 }
 //on failure
 function failure(){
     console.log("error nerd");
 }
 //setting the position
-function setPosition(lat,long){
-    posArr.push(lat);
+function setPosition(long,lat){
     posArr.push(long);
+    posArr.push(lat);
 }
 
 function updatePath(el,marker,nodeList){
-    console.log(el.className);
-    console.log(marker);
+    //console.log(el.className);
+    //console.log(marker);
     console.log(nodeList);
+    console.log(marker.geometry.coordinates);
+    //if the markers name is in nodeList, itll change the image to a the active node
     if(nodeList.includes(marker.properties.name)){
         el.style.backgroundImage = 'url(images/active_node.png)';
+    }
+    //comparing user position to marker coordinates
+    if(posArr[0] == marker.geometry.coordinates[0] && posArr[1] == marker.geometry.coordinates[1]){
+        el.style.backgroundImage = 'url(images/completed_node_green.png)';
     }
 }
 
