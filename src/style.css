@@ -3,12 +3,21 @@
 .searchBox::-webkit-scrollbar{
     width: 0.5625em;
     background-color: lightgray;
+
     border-radius: 0.3125em;
     padding-right: 0.3125em;
 }
 .searchBox::-webkit-scrollbar-thumb{
     background-color: grey;
     border-radius: 0.5625em;
+=======
+    border-radius: 5px;
+    padding-right: 5px;
+}
+.searchBox::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 50px;
+
 }
 .searchBox{
     height: 37.5em;
@@ -19,7 +28,11 @@
     float: left;
     position: relative;
     overflow-y: scroll;
+
     border-radius:0.625em;
+=======
+    border-radius: 10px;
+
 }
 
 .searchBar input[type=text]{
@@ -27,7 +40,11 @@
     width: 9.375em;
 }
 .wluBuildingsItems > p{
+
     font-size: 0.5625em;
+=======
+    font-size: 9px;
+
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -36,14 +53,20 @@
     maybe not a div?
 */
 .mapboxgl-popup{
+
     max-width: 25em;
     font: 0.75em/1.25em 'Helvetica Neue', Arial, Helvetica, sans-serif;
+=======
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
 }
 .footer{
     padding-top: 3.125em;
     border: 0.3125em solid green;
     float: right;
 }
+
 
 
 #mapBox{
@@ -53,6 +76,18 @@
     height: 51.554em;
     padding: 1.25em;
     margin: 1.5625em 2.5em;
+=======
+.marker{
+    background-image: url('images/inactive_node.png');
+}
+#mapBox{
+    border: 5px solid black;
+    border-radius: 15px;
+    width: 1200px;
+    height: 600px;
+    padding: 20px;
+    margin: 25px 40px;
+
     float: right;
 }
 
