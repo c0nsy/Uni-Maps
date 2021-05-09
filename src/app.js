@@ -1,4 +1,4 @@
-//ul = wluBuildings
+//this file controls the search bar
 const wluBuilding = document.getElementById('wluBuilding');
 const searchBarjs =   document.querySelector('#searchBarjs');// document.querySelector('#searchBarjs'); //document.getElementById('searchBarjs');
 let wluRooms = [];

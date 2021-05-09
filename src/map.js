@@ -2,9 +2,9 @@
 //mapbox access token
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2xvZ2FuY3MiLCJhIjoiY2tuaTR3OGVsMHU3ODJ3cDVmMWZ5Z2tuciJ9.OquwBA2myFqOQCC9DiS6YQ';
 
-//writing to file
-var fs = 'fs';
-var stream = fs.createWriteStream('destnode.txt');
+
+//list of nodes for testing
+var nodeList = ['laz_se','laz_n'];
 
 //position array
 var posArr = [];
@@ -862,6 +862,9 @@ mapIcons.features.forEach(function(marker){
     //create a DOM element for the marker
     var el = document.createElement('div');
     el.className = 'marker';   
+
+    el.style.backgroundImage = 'url(images/inactive_node.png)';
+
     el.style.width = marker.properties.iconSize[0] + 'px';
     el.style.height = marker.properties.iconSize[1] + 'px';
     el.style.backgroundSize = '100%';
@@ -876,16 +879,31 @@ mapIcons.features.forEach(function(marker){
     popup.on('open', function(popup){
         dest_node = marker.properties.name;
         console.log('name is: ' + dest_node);
+
+        //There needs to be a function here that takes in user starting posistion and then runs it through the algo
+        //output is node list
+        //nodeList = .... 
+    });
+    
+
         
     });
     
     
+
 
     //adding marker to map
     new mapboxgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
         .addTo(map)
         .setPopup(popup);
+
+    
+    //this update path sets all the nodes within nodeList to active nodes
+    //nodelist must come from function call in the popup.on thing
+    updatePath(el,marker,nodeList);
+
+
 });
 
 
@@ -894,13 +912,37 @@ mapIcons.features.forEach(function(marker){
 function success(position){
     lat = position.coords.latitude;
     long = position.coords.longitude;
+
+    setPosition(long,lat);
+
     setPosition(lat,long);
+
 }
 //on failure
 function failure(){
     console.log("error nerd");
 }
 //setting the position
+
+function setPosition(long,lat){
+    posArr.push(long);
+    posArr.push(lat);
+}
+
+function updatePath(el,marker,nodeList){
+    //console.log(el.className);
+    //console.log(marker);
+    console.log(nodeList);
+    console.log(marker.geometry.coordinates);
+    //if the markers name is in nodeList, itll change the image to a the active node
+    if(nodeList.includes(marker.properties.name)){
+        el.style.backgroundImage = 'url(images/active_node.png)';
+    }
+    //comparing user position to marker coordinates
+    if(posArr[0] == marker.geometry.coordinates[0] && posArr[1] == marker.geometry.coordinates[1]){
+        el.style.backgroundImage = 'url(images/completed_node_green.png)';
+    }
+=======
 function setPosition(lat,long){
     posArr.push(lat);
     posArr.push(long);

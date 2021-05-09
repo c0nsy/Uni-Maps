@@ -1,33 +1,50 @@
 
 
 .searchBox::-webkit-scrollbar{
-    width: 9px;
+    width: 0.5625em;
     background-color: lightgray;
+
+    border-radius: 0.3125em;
+    padding-right: 0.3125em;
+}
+.searchBox::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 0.5625em;
+=======
     border-radius: 5px;
     padding-right: 5px;
 }
 .searchBox::-webkit-scrollbar-thumb{
     background-color: grey;
     border-radius: 50px;
+
 }
 .searchBox{
-    height: 600px;
-    width: 450px;
-    border: 5px solid black;
-    padding: 20px;
-    margin: 25px 0px 0px 40px;
+    height: 37.5em;
+    width: 28.125em;
+    border: 0.3125em solid black;
+    padding: 1.25em;
+    margin: 1.5625em 0em 0em 2.5em;
     float: left;
     position: relative;
     overflow-y: scroll;
+
+    border-radius:0.625em;
+=======
     border-radius: 10px;
+
 }
 
 .searchBar input[type=text]{
-    margin: 0px 0px 0px 45px;
-    width: 150px;
+    margin: 0em 0em 0em 2.8125em;
+    width: 9.375em;
 }
 .wluBuildingsItems > p{
+
+    font-size: 0.5625em;
+=======
     font-size: 9px;
+
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -36,15 +53,30 @@
     maybe not a div?
 */
 .mapboxgl-popup{
+
+    max-width: 25em;
+    font: 0.75em/1.25em 'Helvetica Neue', Arial, Helvetica, sans-serif;
+=======
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
 }
 .footer{
-    padding-top: 50px;
-    border: 5px solid green;
+    padding-top: 3.125em;
+    border: 0.3125em solid green;
     float: right;
 }
 
+
+
+#mapBox{
+    border: 0.3125em solid black;
+    border-radius: 0.9375em;
+    width: 100em;
+    height: 51.554em;
+    padding: 1.25em;
+    margin: 1.5625em 2.5em;
+=======
 .marker{
     background-image: url('images/inactive_node.png');
 }
@@ -55,13 +87,12 @@
     height: 600px;
     padding: 20px;
     margin: 25px 40px;
+
     float: right;
 }
 
 #mapImage{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
+    border-radius: 0.9375em;
 }
 #wluBuildingWrapper{
     list-style-type: none;
@@ -73,7 +104,7 @@
 #wluBuildingsItemsContainer{
     position: relative;
     display: grid;
-    right: 18px;
+    right: 1.125em;
     
 }
 
