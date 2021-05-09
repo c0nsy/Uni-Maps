@@ -13,11 +13,10 @@
 .searchBox{
     height: 37.5em;
     width: 28.125em;
-    border: 0.3125em solid black;
-    padding: 1.25em;
+    border: 0.25em solid black;
     margin: 1.5625em 0em 0em 2.5em;
     float: left;
-    position: relative;
+   
     overflow-y: scroll;
     border-radius:0.625em;
 }
@@ -39,26 +38,18 @@
     max-width: 25em;
     font: 0.75em/1.25em 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
-.footer{
-    padding-top: 3.125em;
-    border: 0.3125em solid green;
-    float: right;
-}
 
 
 #mapBox{
-    border: 0.3125em solid black;
-    border-radius: 0.9375em;
+    border: 0.35em solid black;
+    border-radius: 0.625em;
     width: 100em;
-    height: 51.554em;
-    padding: 1.25em;
-    margin: 1.5625em 2.5em;
+    height: 50.25em;
+    padding-left: 50px;
+    margin: 2em 2.5em;
     float: right;
 }
 
-#mapImage{
-    border-radius: 0.9375em;
-}
 #wluBuildingWrapper{
     list-style-type: none;
     display: grid;
@@ -73,3 +64,48 @@
     
 }
 
+/*
+mobile device section
+
+each function counts as a break point
+max-width = 0 - 2400 and so on and so forth
+
+1. Make the .search box positioned in the center at the yellow border colour
+2. make mapBox change div width when the window is resized
+*/
+
+@media screen and (max-width: 2400px) {
+    .searchBox, #mapBox{
+        border-color: blue;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 1733px) {
+    .searchBox, #mapBox{
+        border-color: yellow;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 1300px){
+    .searchBox, #mapBox{
+        border-color: red;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 900px){
+    .searchBox, #mapBox{
+        border-color: green;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 600px){
+    .searchBox, #mapBox{
+        border-color: pink;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
