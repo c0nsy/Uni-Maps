@@ -911,10 +911,9 @@ mapIcons.features.forEach(function(marker){
         //reset node icons
         resetPath(elArray);
         //update node icons
-        //this is a comment
-
         updatePath(nodeList,elArray,markerArray);
-    
+        //clearing nodeList after updating all nodes
+        nodeList = [];
     });
     
     //adding marker to map
@@ -945,7 +944,10 @@ function setPosition(long,lat){
 
 //called before updatePath to get rid of any nodes that are already "lit"
 function resetPath(elArray){
+    
     for(var i = 0; i < elArray.length;i++){
+        console.log("Resetting the path");
+        console.log(elArray[i]);
         elArray[i].style.backgroundImage = 'url(images/inactive_node.png)';
     }
 }
@@ -953,14 +955,16 @@ function resetPath(elArray){
 //this updates the node icons based on the algo and user input
 function updatePath(nodeList,elArray){
     var indexArray = [];
-
+    
     //markerArray2 is an array that only has the names of markerArray.properties.names
     for(var i = 0; i < markerArray.length; i++){
         markerArray2.push(markerArray[i].properties.name);  
     }
+    
+    console.log("markerArray: " +markerArray);
+    console.log("markerArray2: "+markerArray2);
     //empty marker array
-    markerArray = [];
-
+    //markerArray = [];
     //this outputs the indexs of markerArray2 that share elements with nodeList
     console.log(nodeList.map(value => markerArray2.findIndex(thingInMarker => thingInMarker === value)));
     //this puts the above console output into index array
@@ -972,7 +976,7 @@ function updatePath(nodeList,elArray){
         console.log(indexArray[i]);
         elArray[indexArray[i]].style.backgroundImage = 'url(images/active_node.png)';
     }
- 
+    
 }
 
 
