@@ -83,6 +83,7 @@ max-width = 0 - 2400 and so on and so forth
 }
 @media screen and (max-width: 1733px) {
     .searchBox, #mapBox{
+        float: none !important;
         border-color: yellow;
         margin-left: auto;
         margin-right: auto;
@@ -90,6 +91,7 @@ max-width = 0 - 2400 and so on and so forth
 }
 @media screen and (max-width: 1300px){
     .searchBox, #mapBox{
+        float: none !important;
         border-color: red;
         margin-left: auto;
         margin-right: auto;
@@ -97,6 +99,7 @@ max-width = 0 - 2400 and so on and so forth
 }
 @media screen and (max-width: 900px){
     .searchBox, #mapBox{
+        float: none !important;
         border-color: green;
         margin-left: auto;
         margin-right: auto;
@@ -104,6 +107,7 @@ max-width = 0 - 2400 and so on and so forth
 }
 @media screen and (max-width: 600px){
     .searchBox, #mapBox{
+        float: none !important;
         border-color: pink;
         margin-left: auto;
         margin-right: auto;
