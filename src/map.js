@@ -911,7 +911,8 @@ mapIcons.features.forEach(function(marker){
         //reset node icons
         resetPath(elArray);
         //update node icons
-        
+        //this is a comment
+
         updatePath(nodeList,elArray,markerArray);
     
     });
