@@ -20,7 +20,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Lazaridis School of Business and Economics, South East Entrance.',
                 'name': 'laz_se',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -32,7 +32,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Lazaridis School of Business and Economics, North Entrance.',
                 'name': 'laz_n',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -44,7 +44,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Lazaridis School of Business and Economics, South West Entrance.',
                 'name': 'laz_sw',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -56,7 +56,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Music Building, North East Entrance.',
                 'name': 'music_ne',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -68,7 +68,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Music Building, East Entrance.',
                 'name': 'music_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -80,7 +80,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Music Building, South West Entrance',
                 'name': 'music_sw',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -92,7 +92,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Dining Hall, East Entrance.',
                 'name': 'dh_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -104,7 +104,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Dining Hall, South Entrance.',
                 'name': 'dh_s',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -116,7 +116,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Dining Hall, West Entrance.',
                 'name': 'dh_w',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -128,7 +128,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Arts Building E, East Entrance.',
                 'name': 'artse_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -140,7 +140,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Arts Building E, West Entrance.',
                 'name': 'artse_w',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -152,7 +152,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Arts Building C, West Entrance.',
                 'name': 'artsc_w',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -164,7 +164,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Arts Building C, East Entrance.',
                 'name': 'artsc_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -176,7 +176,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Arts Building C, North Entrance.',
                 'name': 'artsc_n',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -188,7 +188,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Arts Building C, South Entrance.',
                 'name': 'artsc_s',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -200,7 +200,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Peters Building, North East Entrance.',
                 'name': 'peters_ne',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -212,7 +212,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Peters Building, South East Entrance.',
                 'name': 'peters_se',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -224,7 +224,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Peters Building South West.',
                 'name': 'peters_sw',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -236,7 +236,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Peters Building North West.',
                 'name': 'peters_nw',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -248,7 +248,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Schliegel Building, Entrance.',
                 'name': 'schliegel_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -260,7 +260,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Schliegel Building, North West.',
                 'name': 'schliegel_nw',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -272,7 +272,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Dr. Alvin Woods Building (DAWB), North Entrance.',
                 'name': 'dawb_n',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -284,7 +284,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Dr. Alvin Woods Building (DAWB), South Entrance.',
                 'name': 'dawb_s',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -296,7 +296,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Library, East Entrance.',
                 'name': 'library_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -308,7 +308,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Seminary, North Entrance.',
                 'name': 'seminary_n',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -320,7 +320,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Seminary, South Entrance.',
                 'name': 'seminary_s',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -332,7 +332,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Bricker Academic, North Entrance.',
                 'name': 'brickeracademic_n',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -344,7 +344,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Bricker Academic, South Entrance.',
                 'name': 'brickeracademic_s',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -356,7 +356,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Science Building, North West Entrance.',
                 'name': 'science_nw',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -368,7 +368,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Science Building, North Entrance.',
                 'name': 'science_ne',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -380,7 +380,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Science Building, South East Entrance.',
                 'name': 'science_se',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -392,7 +392,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Science Building, South West Entrance.',
                 'name': 'science_sw',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -404,7 +404,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Co-op Building, East Entrance.',
                 'name': 'coop_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -416,7 +416,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Athletic Complex (AC), South Entrance.',
                 'name': 'ac_s',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -428,11 +428,11 @@ var mapIcons = {
             'properties':{
                 'description': 'Fred Nichols Building, East Entrance.',
                 'name': 'frednichols_e',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.528539,43.473764]
+                'coordinates':[-80.529100,43.473774]
             }
         },
         {
@@ -440,7 +440,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Southeast corner of University and Albert, on Albert.',
                 'name': 'c_1',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -452,7 +452,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Southeast corner of University and Albert, on University.',
                 'name': 'c_2',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -464,7 +464,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Bus stop at University and Albert, north of Peters Building.',
                 'name': 'c_3',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -476,7 +476,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Street lights between Lazaridis Hall and walkway to Solarium/Dining Hall/Arts E.',
                 'name': 'c_4',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -488,7 +488,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Street lights at University and Hazel.',
                 'name': 'c_5',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -500,7 +500,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Top of driveway into Conrad Hall, near garbage bins.',
                 'name': 'c_6',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -512,7 +512,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Southwest corner of University and King.',
                 'name': 'c_7',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -524,7 +524,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Driveway entrace to AC parking lot off of King St',
                 'name': 'c_8',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -536,7 +536,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Walkway between Alumni Field and AC.',
                 'name': 'c_9',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -548,7 +548,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Bottom of ramp down from Willison hall into parking lot.',
                 'name': 'c_10',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -560,7 +560,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Crossing between walkway up to Fred Nichols and small parking lot.',
                 'name': 'c_11',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -572,7 +572,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Courtyard in front of Food Court and statue of Wilf.',
                 'name': 'c_12',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -584,7 +584,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Walkway by patio outside of Food Court and back of Macdonald House.',
                 'name': 'c_13',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -596,7 +596,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Stairs beside Alumni Hall up to parking lot.',
                 'name': 'c_14',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -608,7 +608,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Path outside front of Library.',
                 'name': 'c_15',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -620,7 +620,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Entrance to Peters, Scheigel, and Arts C.',
                 'name': 'c_16',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -632,7 +632,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Entrance to Peters and Scheligel off of Albert St.',
                 'name': 'c_17',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -644,7 +644,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Back of Library on Albert St.',
                 'name': 'c_18',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -656,7 +656,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Path from Albert St into parking lot.',
                 'name': 'c_19',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -668,7 +668,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Campus Directory sign near Library.',
                 'name': 'c_20',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -680,7 +680,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Northeast corner of Albert and Bricker.',
                 'name': 'c_21',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -692,7 +692,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Entrace to seminary from Bricker Ave.',
                 'name': 'c_22',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -704,7 +704,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Top of pathway from Bricker Ave towards Leupold Residence.',
                 'name': 'c_23',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -716,7 +716,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Grassy area between Euler, Leopold, and Bricker Residences.',
                 'name': 'c_24',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -728,7 +728,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Ramp down from grassy are into parking lot by Bouckaert Residence.',
                 'name': 'c_25',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -740,7 +740,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Bricker Ave between Bricker Residence and Academic Building.',
                 'name': 'c_26',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -752,7 +752,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Bricker Ave entrance to southwest corner of Science Building.',
                 'name': 'c_27',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -764,7 +764,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Bricker Ave entrance to southeast corner of Science Building.',
                 'name': 'c_28',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -776,7 +776,7 @@ var mapIcons = {
             'properties':{
                 'description': 'King St entrace to parking lot between Science Building and Alumni Field.',
                 'name': 'c_29',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -788,7 +788,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Parking lot between Science Building and Alumni Field.',
                 'name': 'c_30',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -800,7 +800,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Parking lot between Willison Hall and Science Reseach/Receiving.',
                 'name': 'c_31',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -812,7 +812,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Top of parking lot outside Bricker Academic near Emergency Help Pole.',
                 'name': 'c_32',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -824,7 +824,7 @@ var mapIcons = {
             'properties':{
                 'description': 'Sidewalk between Little House and Willison Hall Residences.',
                 'name': 'c_33',
-                'iconSize': [15,15]
+                'iconSize': [30,30]
             },
             'geometry':{
                 'type': 'Point',
@@ -843,7 +843,7 @@ var markerArray2 = [];
 var map = new mapboxgl.Map({
     container: 'mapBox',
     center: [-80.5278, 43.4740],
-    zoom: 16,
+    zoom: 17,
     style: 'mapbox://styles/mapbox/streets-v11'
     });
 
@@ -868,7 +868,7 @@ mapIcons.features.forEach(function(marker){
     
     el.className = 'marker';   
     el.style.backgroundImage = 'url(images/inactive_node.png)';
-    el.style.width = marker.properties.iconSize[0] + 'px';
+    el.style.width = marker.properties.iconSize[1] + 'px';
     el.style.height = marker.properties.iconSize[1] + 'px';
     el.style.backgroundSize = '100%';
     elArray.push(el);
@@ -946,8 +946,6 @@ function setPosition(long,lat){
 function resetPath(elArray){
     
     for(var i = 0; i < elArray.length;i++){
-        console.log("Resetting the path");
-        console.log(elArray[i]);
         elArray[i].style.backgroundImage = 'url(images/inactive_node.png)';
     }
 }
