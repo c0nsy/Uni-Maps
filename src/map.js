@@ -120,7 +120,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.529199,43.474145]
+                'coordinates':[-80.528900,43.474045]
             }
         },
         {
@@ -132,7 +132,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.529137,43.474109]
+                'coordinates':[-80.529137,43.474009]
             }
         },
         {
@@ -145,18 +145,6 @@ var mapIcons = {
             'geometry':{
                 'type': 'Point',
                 'coordinates':[-80.5296,43.473855]
-            }
-        },
-        {
-            'type': 'Feature',
-            'properties':{
-                'description': 'Arts Building C, West Entrance.',
-                'name': 'artsc_w',
-                'iconSize': [30,30]
-            },
-            'geometry':{
-                'type': 'Point',
-                'coordinates':[-80.529136,43.474108]
             }
         },
         {
@@ -180,7 +168,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.530201,43.473853]
+                'coordinates':[-80.530071,43.473723]
             }
         },
         {
@@ -444,7 +432,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.531674,43.473292]
+                'coordinates':[-80.531524,43.473590]
             }
         },
         {
@@ -588,7 +576,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.528539,43.473764]
+                'coordinates':[-80.528439,43.473634]
             }
         },
         {
@@ -600,7 +588,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.528319,43.472619]
+                'coordinates':[-80.528449,43.473200]
             }
         },
         {
@@ -624,7 +612,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.530066,43.473351]
+                'coordinates':[-80.530006,43.473451]
             }
         },
         {
@@ -636,7 +624,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.531459,43.472971]
+                'coordinates':[-80.531029,43.473200]
             }
         },
         {
@@ -684,7 +672,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.527147,43.471539]
+                'coordinates':[-80.529280,43.471539]
             }
         },
         {
@@ -744,7 +732,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.5269,43.472106]
+                'coordinates':[-80.5269,43.472246]
             }
         },
         {
@@ -804,7 +792,7 @@ var mapIcons = {
             },
             'geometry':{
                 'type': 'Point',
-                'coordinates':[-80.526385,43.474013]
+                'coordinates':[-80.526500,43.473303]
             }
         },
         {
@@ -890,7 +878,7 @@ mapIcons.features.forEach(function(marker){
         //start coordinates currently set to ac
         var start_lat = posArr[1];
         var start_long = posArr[0];
-        console.log("your current location is:"+posArr.toString())
+        //console.log("your current location is:"+posArr.toString())
         var g = new Graph();
         g.loadGraph();
         //g.display_graph(); uncomment if you wanna see the whole graph
@@ -902,8 +890,8 @@ mapIcons.features.forEach(function(marker){
         path.push(target.get_id());
         path = g.shortest(target,path);
         path.reverse()
-        console.log("The node closest to where ur current location is:"+start)
-        console.log("which has lat of:"+g.get_vertex(start).latitude+" and long of: "+g.get_vertex(start).longitude)
+        //console.log("The node closest to where ur current location is:"+start)
+        //console.log("which has lat of:"+g.get_vertex(start).latitude+" and long of: "+g.get_vertex(start).longitude)
         console.log('Shortest path: '+path.toString());
         for(var i = 0; i < path.length; i++){
             nodeList.push(path[i]);
@@ -959,27 +947,59 @@ function updatePath(nodeList,elArray){
         markerArray2.push(markerArray[i].properties.name);  
     }
     
-    console.log("markerArray: " +markerArray);
-    console.log("markerArray2: "+markerArray2);
+   // console.log("markerArray: " +markerArray);
+    //console.log("markerArray2: "+markerArray2);
     //empty marker array
     //markerArray = [];
     //this outputs the indexs of markerArray2 that share elements with nodeList
-    console.log(nodeList.map(value => markerArray2.findIndex(thingInMarker => thingInMarker === value)));
+    //console.log(nodeList.map(value => markerArray2.findIndex(thingInMarker => thingInMarker === value)));
     //this puts the above console output into index array
     indexArray = nodeList.map(value => markerArray2.findIndex(thingInMarker => thingInMarker === value));
-    console.log("this is index array: " + indexArray);
+    //console.log("this is index array: " + indexArray);
 
     //changing the background images of only the boys
     for(var i = 0; i < indexArray.length; i++){
-        console.log(indexArray[i]);
+        //console.log(indexArray[i]);
         elArray[indexArray[i]].style.backgroundImage = 'url(images/active_node.png)';
     }
     
 }
 
-
+function test(elArray){
+        dest_node = document.getElementById("searchDiv").className;
+        console.log("The node you just clicked on is:"+dest_node)
+        //console.log('name is: ' + dest_node);
+        //these variables should be replaced with curr location data
+        //start coordinates currently set to ac
+        var start_lat = posArr[1];
+        var start_long = posArr[0];
+        //console.log("your current location is:"+posArr.toString())
+        var g = new Graph();
+        g.loadGraph();
+        //g.display_graph(); uncomment if you wanna see the whole graph
+        var start = g.get_closest_node_to_curr_location(start_lat,start_long);
+        var end = g.get_vertex(dest_node);
+        g.dijkstra(g.get_vertex(start),g.get_vertex(dest_node));
+        var target = g.get_vertex(dest_node);
+        var path = [];
+        path.push(target.get_id());
+        path = g.shortest(target,path);
+        path.reverse()
+        //console.log("The node closest to where ur current location is:"+start)
+        //console.log("which has lat of:"+g.get_vertex(start).latitude+" and long of: "+g.get_vertex(start).longitude)
+        console.log('Shortest path: '+path.toString());
+        for(var i = 0; i < path.length; i++){
+            nodeList.push(path[i]);
+        }
+        //reset node icons
+        resetPath(elArray);
+        //update node icons
+        updatePath(nodeList,elArray,markerArray);
+        //clearing nodeList after updating all nodes
+        nodeList = [];
+}
 navigator.geolocation.getCurrentPosition(success,failure);
-console.log(posArr);
+//console.log(posArr);
 //-------------GRAPH CODE----------------------
 /**
  * Vertex (node) class
@@ -1277,7 +1297,6 @@ class Graph{
         this.add_vertex("dh_w",43.474145,-80.529199);
         this.add_vertex("artse_e",43.474109,-80.529137);
         this.add_vertex("artse_w",43.473855,-80.5296);
-        this.add_vertex("artsc_w",43.474108,-80.529136);
         this.add_vertex("artsc_e",43.473854,-80.5297);
         this.add_vertex("artsc_n",43.473853,-80.530201);
         this.add_vertex("artsc_s",43.473616,-80.530076);
@@ -1314,147 +1333,176 @@ class Graph{
         this.add_vertex("c_11",43.474124,-80.527389);
         this.add_vertex("c_12",43.473784,-80.528026);
         this.add_vertex("c_13",43.473764,-80.528539);
-        this.add_vertex("c_14",43.472619,-80.528319);
+        this.add_vertex("c_14",43.473200,-80.528449);
         this.add_vertex("c_15",43.472855,-80.529388);
         this.add_vertex("c_16",43.473351,-80.530066);
-        this.add_vertex("c_17",43.472971,-80.531459);
+        this.add_vertex("c_17",43.473200,-80.531029);
         this.add_vertex("c_18",43.472726,-80.530715);
         this.add_vertex("c_19",43.472521,-80.530097);
         this.add_vertex("c_20",43.472706,-80.529467);
-        this.add_vertex("c_21",43.471539,-80.527147);
+        this.add_vertex("c_21",43.471539,-80.529280);
         this.add_vertex("c_22",43.471883,-80.528362);
         this.add_vertex("c_23",43.472323,-80.528142);
         this.add_vertex("c_24",43.472828,-80.527892);
         this.add_vertex("c_25",43.473142,-80.52742);
-        this.add_vertex("c_26",43.472106,-80.5269);
+        this.add_vertex("c_26",43.472246,-80.5269);
         this.add_vertex("c_27",43.472818,-80.525464);
         this.add_vertex("c_28",43.472932,-80.524646);
         this.add_vertex("c_29",43.473688,-80.524515);
         this.add_vertex("c_30",43.473828,-80.524842);
-        this.add_vertex("c_31",43.474013,-80.526385);
+        this.add_vertex("c_31",43.473303,-80.526500);
         this.add_vertex("c_32",43.473267,-80.526909);
         this.add_vertex("c_33",43.473701,-80.527229);
 
-        //add edges
-        this.add_edge('c_1','peters_nw');
-        this.add_edge("c_1","c_2");
-        this.add_edge("c_1","c_17");
-        this.add_edge("c_1","c_18");
-        
-        this.add_edge("c_2","peters_nw");
-        this.add_edge("c_2","c_3");
-        
-        this.add_edge("c_3","peters_ne");
-        this.add_edge("c_3","c_4");
-        
-        this.add_edge("c_4","artse_e");
-        this.add_edge("c_4","dh_w");
-        this.add_edge("c_4","c_5");
-        this.add_edge("c_4","laz_sw");
-        
-        this.add_edge("c_5","laz_se")
-        this.add_edge("c_5","music_ne");
-        this.add_edge("c_5","c_11");
-        this.add_edge("c_5","c_6");
-        
-        this.add_edge("c_6","c_9");
-        this.add_edge("c_6","c_7");
-        
-        this.add_edge("c_7","c_8");
-        
-        this.add_edge("c_8","c_9");
-        this.add_edge("c_8","c_29");
-        
-        this.add_edge("c_9","ac_s");
-        this.add_edge("c_9","c_10");
-        
-        this.add_edge("c_10","c_11");
-        this.add_edge("c_10","c_31");
-        
-        this.add_edge("c_11","c_12");
-        this.add_edge("c_11","c_33");
-        
-        this.add_edge("c_12","music_sw");
-        this.add_edge("c_12","dh_s");
-        this.add_edge("c_12","frednichols_e");
-        this.add_edge("c_12","c_13");
-        
-        this.add_edge("c_13","c_14");
-        this.add_edge("c_13","c_24");
-        this.add_edge("c_13","c_25");
-        
-        this.add_edge("c_14","dawb_s");
-        this.add_edge("c_14","c_15");
-        this.add_edge("c_14","c_20");
-        this.add_edge("c_14","c_23");
-        
-        this.add_edge("c_15","dawb_s");
-        this.add_edge("c_15","c_16");
-        this.add_edge("c_15","library_e");
-        this.add_edge("c_15","c_18");
-        this.add_edge("c_15","c_20");
-        
-        this.add_edge("c_16","dawb_n");
-        this.add_edge("c_16","artsc_s");
-        this.add_edge("c_16","peters_se");
-        this.add_edge("c_16","schliegel_e");
-        this.add_edge("c_16","c_18");
-        
-        this.add_edge("c_17","peters_sw");
-        this.add_edge("c_17","schliegel_nw");
-        this.add_edge("c_17","c_18");
-        
-        this.add_edge("c_18","c_19");
-        
-        this.add_edge("c_19","c_20");
-        this.add_edge("c_19","c_21");
-        
-        this.add_edge("c_20","seminary_n");
-        this.add_edge("c_20","c_23");
-        
-        this.add_edge("c_21","seminary_s");
-        this.add_edge("c_21","c_22");
-        
-        this.add_edge("c_22","c_23");
-        this.add_edge("c_22","seminary_s");
-        this.add_edge("c_22","c_24");
-        this.add_edge("c_22","c_26");
-        
-        this.add_edge("c_23","c_24");
-        
-        this.add_edge("c_24","c_25");
-        
-        this.add_edge("c_25","c_32");
-        this.add_edge("c_25","c_26");
-        
-        this.add_edge("c_26","brickeracademic_s");
-        this.add_edge("c_26","c_27");
-        
-        this.add_edge("c_27","science_sw");
-        this.add_edge("c_27","c_28");
-        
-        this.add_edge("c_28","c_29");
-        this.add_edge("c_28","science_se");
-        
-        this.add_edge("c_29","c_30");
-        
-        this.add_edge("c_30","science_ne");
-        this.add_edge("c_30","c_31");
-        
-        this.add_edge("c_31","c_32");
-        this.add_edge("c_31","science_nw");
-        
-        this.add_edge("c_32","brickeracademic_n");
-        this.add_edge("c_32","c_33");
-    //adding inter building connections
-        this.add_edge("peters_se","artsc_w");
-        this.add_edge("artsc_e","artse_w");
-        this.add_edge("dawb_s","frednichols_e");
-        this.add_edge("music_ne","laz_se")
-        this.add_edge("laz_se","laz_sw")
+               //add edges
+               this.add_edge('c_1','peters_nw');
+               this.add_edge("c_1","c_2");
+               this.add_edge("c_1","c_17");
+               
+               this.add_edge("c_2","peters_nw");
+               this.add_edge("c_2","c_3");
+               
+               this.add_edge("c_3","peters_ne");
+               this.add_edge("c_3","c_4");
+               
+               this.add_edge("c_4","artse_e");
+               this.add_edge("c_4","dh_w");
+               this.add_edge("c_4","c_5");
+               this.add_edge("c_4","laz_sw");
+               this.add_edge("c_4","music_ne")
+               this.add_edge("c_4","artsc_e")
+       
+               this.add_edge("c_5","laz_se")
+               this.add_edge("c_5","music_ne");
+               this.add_edge("c_5","c_11");
+               this.add_edge("c_5","c_6");
+       
+               this.add_edge("c_6","c_9");
+               this.add_edge("c_6","c_7");
+               
+               this.add_edge("c_7","c_8");
+               
+               this.add_edge("c_8","c_9");
+               this.add_edge("c_8","coop_e")
+               this.add_edge("c_8","c_29");
+               
+               this.add_edge("c_9","ac_s");
+               this.add_edge("c_9","c_10");
+               
+               this.add_edge("c_10","c_11");
+               this.add_edge("c_10","c_31");
+               
+               this.add_edge("c_11","c_12");
+               this.add_edge("c_11","c_33");
+               this.add_edge("c_11","music_e");
+               
+               this.add_edge("c_12","music_sw");
+               this.add_edge("c_12","dh_s");
+               this.add_edge("c_12","frednichols_e");
+               this.add_edge("c_12","dh_e")
+               this.add_edge("c_12","c_13");
+               
+               this.add_edge("c_13","c_14");
+               this.add_edge("c_13","c_24");
+               this.add_edge("c_13","c_25");
+               this.add_edge("c_13","c_33")
+               
+               this.add_edge("c_14","dawb_s");
+               this.add_edge("c_14","c_15");
+               this.add_edge("c_14","c_20");
+               this.add_edge("c_14","c_23");
+               this.add_edge("c_14","c_25")
+               
+               this.add_edge("c_15","dawb_s");
+               this.add_edge("c_15","c_16");
+               this.add_edge("c_15","library_e");   
+               this.add_edge("c_15","c_20");
+               
+               this.add_edge("c_16","dawb_n");
+               this.add_edge("c_16","artsc_s");
+               this.add_edge("c_16","peters_se");
+               this.add_edge("c_16","schliegel_e");
+               this.add_edge("c_16","c_18");
+               
+               this.add_edge("c_17","peters_sw");
+               this.add_edge("c_17","schliegel_nw");
+               this.add_edge("c_17","c_18");
+               
+               this.add_edge("c_18","c_19");
+               
+               this.add_edge("c_19","c_20");
+               this.add_edge("c_19","c_21");
+               
+               this.add_edge("c_20","seminary_n");
+               this.add_edge("c_20","c_23");
+               
+               this.add_edge("c_21","seminary_s");
+               this.add_edge("c_21","c_22");
+               
+               this.add_edge("c_22","c_23");
+               this.add_edge("c_22","seminary_s");
+               this.add_edge("c_22","c_26");
+               
+               this.add_edge("c_23","c_24");
+               this.add_edge("c_23","seminary_n")
+               
+               this.add_edge("c_24","c_25");
+               
+               this.add_edge("c_25","c_32");
+               this.add_edge("c_25","c_26");
+               
+               this.add_edge("c_26","brickeracademic_s");
+               this.add_edge("c_26","c_27");
+               
+               this.add_edge("c_27","science_sw");
+               this.add_edge("c_27","c_28");
+               this.add_edge("c_27","brickeracademic_s")
+               
+               this.add_edge("c_28","c_29");
+               this.add_edge("c_28","science_se");
+               
+               this.add_edge("c_29","c_30");
+               
+               this.add_edge("c_30","science_ne");
+               this.add_edge("c_30","c_31");
+               this.add_edge("c_30","coop_e")
+               
+               this.add_edge("c_31","c_32");
+               this.add_edge("c_31","science_nw");
+               
+               this.add_edge("c_32","brickeracademic_n");
+               this.add_edge("c_32","c_33");
+           //adding inter building connections
+               this.add_edge("artsc_e","artse_w");
+               this.add_edge("dawb_s","frednichols_e");
+               this.add_edge("music_ne","laz_se")
+               this.add_edge("music_ne","music_e")
+               this.add_edge("laz_se","laz_sw")
+               this.add_edge("laz_n","laz_se")
+               this.add_edge("laz_se","c_5");
+               this.add_edge("coop_e","c_29")
 
-    //c0nsys amendments
-        this.add_edge("laz_n","laz_se","c_5");
+               this.add_edge("artsc_n","c_3")
+               this.add_edge("artsc_n","peters_nw")
+               this.add_edge("artsc_n","peters_ne")
+               this.add_edge("artsc_n","artsc_s")
+               this.add_edge("artsc_n","artsc_e")
+
+               this.add_edge("artsc_s","schliegel_e")
+               this.add_edge("artsc_s","artsc_e")
+               this.add_edge("artsc_s","schliegel_nw")
+               this.add_edge("schliegel_nw","schliegel_e")
+
+               this.add_edge("artsc_e","artse_w")
+               this.add_edge("dh_e","music_e")
+               this.add_edge("dh_e","dh_s")
+               this.add_edge("dh_w","dh_s")
+               this.add_edge("dh_w","artse_e")
+               
+               this.add_edge("frednichols_e","artse_w")
+               this.add_edge("frednichols_e","dawb_n")
+               this.add_edge("frednichols_e","dawb_s")
+               this.add_edge("dawb_n","dawb_s")
     }
     /**
      * creates the minimum spanning tree for a graph

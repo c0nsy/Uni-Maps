@@ -14,14 +14,13 @@
     <!--Body area-->
     <body>
 
-        <!--Add search bar within this box that has .onupdate functionality-->
-        <div class ="searchBox">
-                <!--<input type = "text" placeholder="Class room..."> THIS WAS THE INPUT BOX THING-->
+        <!--Add search bar within this box that has .onupdate functionality & clicky clicks-->
+        <div class ="searchBox" onclick="test(elArray)">
                 <input
                     type = "text"
                     name = "searchBarjs"
                     id = "searchBarjs"
-                    placeholder="Type a building..."
+                    placeholder="Search for a building..."
                 />
                 <ul id = "wluBuildingWrapper"></ul>
                 
@@ -29,7 +28,7 @@
         
         <div id='mapBox'></div>
             <!--stores the map functions-->
-            <script src = 'map.js'></script>
+    <script src = 'map.js'></script>
 
     <script src="app.js"></script>
     </body>
